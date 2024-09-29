@@ -57,7 +57,7 @@ app.post("/api/contact", jsonParser, (req, res) => {
     subject: "Email home",
     text:
       `FName: ${req.body.fname}` +
-      `LName: ${req.body.fname}` +
+      `LName: ${req.body.lName}` +
       `Mobile Number: ${req.body.mobNum}` +
       `Email: ${req.body.mail}`,
   };
