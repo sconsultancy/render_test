@@ -1,8 +1,8 @@
+require("dotenv").config();
 const express = require("express");
 var cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-
 const app = express();
 app.use(cors());
 
@@ -19,7 +19,7 @@ app.post("/api/email", jsonParser, (req, res) => {
     port: 465,
     auth: {
       user: "sconsultancygroup21@gmail.com",
-      pass: "dnhftjhavjkvmkzi",
+      pass: process.env.GPASS,
     },
   });
 
